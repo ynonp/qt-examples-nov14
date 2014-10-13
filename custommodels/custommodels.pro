@@ -1,22 +1,24 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2014-10-12T11:59:01
+# Project created by QtCreator 2014-10-11T17:29:22
 #
 #-------------------------------------------------
 
-QT       += core gui concurrent
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = concurency1
+TARGET = custommodels
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    countworker.cpp
+    squaremodel.cpp \
+    numericdelegate.cpp
 
 HEADERS  += mainwindow.h \
-    countworker.h
+    squaremodel.h \
+    numericdelegate.h
 
 FORMS    += mainwindow.ui

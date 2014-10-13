@@ -3,14 +3,18 @@
 
 const long kCount = 999999999;
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(CountWorker &worker, QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    _worker(worker)
 {
+    _worker.setCount(kCount);
+
     ui->setupUi(this);
     QObject::connect(&_timer, &QTimer::timeout, this, &MainWindow::calcAsyncValue);
     QObject::connect(ui->btn_async, &QPushButton::clicked, this, &MainWindow::startCalcAsync);
-    QObject::connect(ui->btn_sync, &QPushButton::clicked, this, &MainWindow::calcSync);
+    QObject::connect(ui->btn_sync, &QPushButton::clicked, &_worker, &CountWorker::count);
+    QObject::connect(&_worker, &CountWorker::gotResult, this, &MainWindow::endCalcSync);
 }
 
 MainWindow::~MainWindow()
@@ -18,15 +22,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::calcSync()
+void MainWindow::endCalcSync(long result)
 {
-    long sum = 0;
-    for(long i=0; i < kCount; i++ )
-    {
-        sum += i;
-    }
-    ui->label->setText(QString("Result: %1").arg(sum));
+    ui->label->setText(QString("Result: %1").arg(result));
 }
+
 
 void MainWindow::startCalcAsync()
 {

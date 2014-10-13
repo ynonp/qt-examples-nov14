@@ -1,22 +1,20 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2014-10-12T11:59:01
+# Project created by QtCreator 2014-10-11T09:15:58
 #
 #-------------------------------------------------
 
-QT       += core gui concurrent
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = concurency1
+TARGET = mvc1
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    countworker.cpp
+        mainwindow.cpp
 
-HEADERS  += mainwindow.h \
-    countworker.h
+HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
