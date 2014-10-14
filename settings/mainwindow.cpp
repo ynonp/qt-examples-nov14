@@ -10,6 +10,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     readPosition();
+
+    QFile f(":quote.txt");
+    f.open(QIODevice::ReadOnly);
+    QTextStream in(&f);
+    QString quote = in.readAll();
+    ui->label->setText(quote);
 }
 
 MainWindow::~MainWindow()

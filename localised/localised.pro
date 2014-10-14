@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2014-10-13T15:04:38
+# Project created by QtCreator 2014-10-14T17:19:13
 #
 #-------------------------------------------------
 
@@ -8,9 +8,10 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = settings
+TARGET = localised
 TEMPLATE = app
 
+TRANSLATIONS    +=  localization_he.ts
 
 SOURCES += main.cpp\
         mainwindow.cpp
@@ -19,9 +20,5 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
-OTHER_FILES += \
-    quote.txt \
-    quote_fr.txt
-
 RESOURCES += \
-    text.qrc
+    translations.qrc
