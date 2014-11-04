@@ -3,13 +3,15 @@
 ## Day 1
 
 ### Hello Qt
-A simple Qt Hello World application
+* HelloQt/ A simple Qt Hello World application
 
 ### Layout Examples
-layouts1/ using layouts in code
-layout2/ using layouts with UI Designer
+* layouts1/ using layouts in code
+* layout2/ using layouts with UI Designer
 
 ### Custom Widgets
-MyWidgets A character counting text box widget
+* MyWidgets/ A character counting text box widget
+
+
 
 
