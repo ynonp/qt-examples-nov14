@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias="localization.qm">localization_he.qm</file>
-    </qresource>
-</RCC>
