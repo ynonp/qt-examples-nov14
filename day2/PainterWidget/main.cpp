@@ -1,14 +1,17 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include "dynamicwidget.h"
+#include "paintwidget.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 //    MainWindow w;
 //    w.show();
+    PaintWidget w;
+    QPalette p = w.palette();
+    p.setColor(QPalette::Window, Qt::red);
+    w.setPalette(p);
 
-    DynamicWidget w("/Users/ynonperek/tmp/qt-examples-nov14/runtime.ui");
     w.show();
 
 

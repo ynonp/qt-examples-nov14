@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui uitools
+QT       += core gui uitools xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    dynamicwidget.cpp
+    dynamicwidget.cpp \
+    mysaxloader.cpp \
+    mysaxhandler.cpp
 
 HEADERS  += mainwindow.h \
-    dynamicwidget.h
+    dynamicwidget.h \
+    mysaxloader.h \
+    mysaxhandler.h
 
 FORMS    += mainwindow.ui
