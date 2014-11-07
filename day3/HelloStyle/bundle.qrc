@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="style.qss">style.qss</file>
+    </qresource>
+    <qresource prefix="/" lang="he">
+        <file alias="style.qss">style_he.qss</file>
+    </qresource>
+</RCC>
